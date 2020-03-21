@@ -36,6 +36,10 @@ public class S3Service {
 		return s3client.getObject(bucketName, fileName);
 	}
 	
+	public void deleteFile(String fileName) {
+		s3client.deleteObject(bucketName, fileName);
+	}
+	
 	public URI uploadFile(MultipartFile file) throws FilerException {
 		try {
 			
